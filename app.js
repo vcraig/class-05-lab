@@ -98,11 +98,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // // function multiplyArray(testArray) {
 //
-// };
+testArray = [2,3,4];
+function multiplyArray(testArray) {
+  result = multiply(multiply(testArray[0],testArray[1])[0], testArray[2])[0];
+  //console.log(result);
+  var message = ''.concat('The numbers ', testArray[0], ',',testArray[1], ',',testArray[2],' have a product of ', result, '.');
+  //console.log(message);
+  return[result, message];
+}
 
-// Here is the test for multiplyArray(); uncomment it to run it
-
-// testMultiplyArray(testArray);
+//multiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
